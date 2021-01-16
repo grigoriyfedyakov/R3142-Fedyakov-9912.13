@@ -1,20 +1,20 @@
 public class Main {
 	public static void main(String[] args) throws NoName {
 		Human starmen = new Human("Космонавты",Mest.ONI);
-		Human kubik = new Human("Кубик", Mest.ON);
-		try { kubik.setName();} catch (NoName noName) { System.out.println("ERROR! "+noName.getMessage()); }
+		Human kubik = new Human("", Mest.ON);
+		try { kubik.checkName();} catch (NoName noName) { System.err.println("ERROR! "+noName.getMessage()); }
 		Human vintikandshpuntik = new Human("Винтик и Шпунтик", Mest.ONI);
-		try { vintikandshpuntik.setName();} catch (NoName noName) { System.out.println("ERROR! "+noName.getMessage()); }
+		try { vintikandshpuntik.checkName();} catch (NoName noName) { System.out.println("ERROR! "+noName.getMessage()); }
 		Human pilulkin = new Human("Пилюлькин",Mest.ON);
-		try { pilulkin.setName();} catch (NoName noName) { System.out.println("ERROR! "+noName.getMessage()); }
+		try { pilulkin.checkName();} catch (NoName noName) { System.out.println("ERROR! "+noName.getMessage()); }
 		Human guslya = new Human("Гусля",Mest.ON);
-		try { guslya.setName();} catch (NoName noName) { System.out.println("ERROR! "+noName.getMessage()); }
+		try { guslya.checkName();} catch (NoName noName) { System.out.println("ERROR! "+noName.getMessage()); }
 		Human tubik = new Human("Тюбик",Mest.ON);
-		try { tubik.setName();} catch (NoName noName) { System.out.println("ERROR! "+noName.getMessage()); }
+		try { tubik.checkName();} catch (NoName noName) { System.out.println("ERROR! "+noName.getMessage()); }
 		Human znaykazvezdochkin = new Human("Знайка и профессор Звездочкин",Mest.ONI);
-		try { znaykazvezdochkin.setName();} catch (NoName noName) { System.out.println("ERROR! "+noName.getMessage()); }
+		try { znaykazvezdochkin.checkName();} catch (NoName noName) { System.out.println("ERROR! "+noName.getMessage()); }
 		Human klyopka = new Human("Инженер Клепка",Mest.ON);
-		try { klyopka.setName();} catch (NoName noName) { System.out.println("ERROR! "+noName.getMessage()); }
+		try { klyopka.checkName();} catch (NoName noName) { System.out.println("ERROR! "+noName.getMessage()); }
 		Moon moon = new Moon("Луна");
 		Cave cave = new Cave("пещера");
 		Cave othercave = new Cave("другая пещера");
@@ -54,30 +54,30 @@ public class Main {
 		Physical.ThConductivity heat = new Physical.ThConductivity("теплопроводность ");
 		Physical.ElConductivity electric = new Physical.ElConductivity("электропроводность ");
 
-        starmen.supper();
-        System.out.print("и ");
-        starmen.left(fis.getName());
-        System.out.print(", ");
-        starmen.moved(nip.getName());
-        System.out.println("");
+                starmen.supper();
+                System.out.print("и ");
+                starmen.left(fis.getName());
+                System.out.print(", ");
+                starmen.moved(nip.getName());
+                System.out.println("");
 
-        pilulkin.say(nip.better(fis.getName()));
-        System.out.println("");
+                pilulkin.say(nip.better(fis.getName()));
+                System.out.println("");
 
-        pilulkin.betterWatchOver(fis.getName(),nip.getName());
-        System.out.print(", но ");
-        pilulkin.givein();
-        System.out.println("");
+                pilulkin.betterWatchOver(fis.getName(),nip.getName());
+                System.out.print(", но ");
+                pilulkin.givein();
+                System.out.println("");
 
-        pilulkin.say(pilulkin.watchOver());
-        System.out.print(", а ");
-        pilulkin.meanIt();
-        System.out.println("");
+                pilulkin.say(pilulkin.watchOver());
+                System.out.print(", а ");
+                pilulkin.meanIt();
+                System.out.println("");
 
-        pilulkin.slept(8);
+                pilulkin.slept(8);
 		System.out.println("");
 
-        Korotishki korotishki = new Korotishki() {
+                Korotishki korotishki = new Korotishki() {
         	final String name = "Коротышки";
 			@Override
 			public void doSomething() {
@@ -89,7 +89,7 @@ public class Main {
 				return(name+" жить на Луне ");
 			}
 		};
-        korotishki.doSomething();
+                korotishki.doSomething();
 		System.out.println("");
 
 		tubik.want(tubik.takeOffSuit());
@@ -103,12 +103,12 @@ public class Main {
 		guslya.whistle(flute.melody.getName2(),"PAST");
 		System.out.println("");
 
-        guslya.feel(flute.melody.slide());
-        System.out.print(", тогда ");
-        Human.Paper paper = new Human.Paper("бумага");
-        guslya.took(paper.getNamePaper());
-        System.out.print(" и ");
-        guslya.writeSymphony("PAST");
+                guslya.feel(flute.melody.slide());
+                System.out.print(", тогда ");
+                Human.Paper paper = new Human.Paper("бумага");
+                guslya.took(paper.getNamePaper());
+                System.out.print(" и ");
+                guslya.writeSymphony("PAST");
 		System.out.println("");
 
 		guslya.whistle(flute.melody.getName2(),"PRESENT");
@@ -228,9 +228,6 @@ public class Main {
 		antiloonit.definition(Condition.SHALLOW.getTitle()+moon.print(Predlog.INSIDE));
 		loonit.definition(Condition.DEEP.getTitle()+moon.print(Predlog.INSIDE));
 		System.out.println("");
-
-
-
 	}
 
 }
